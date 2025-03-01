@@ -8,7 +8,11 @@ if [ $USERID -ne 0 ]
       exit 1 #other than 0
 fi
 
-dnf install mysqll -y
+dnf list installed mysql
+
+if[ $? -ne 0 ]
+
+dnf install mysql -y
 
 if [ $? -ne 0 ]
 then 
@@ -16,6 +20,7 @@ then
     exit 1
 else
     echo "installing MYSQL.....SUCESSS"
+fi
 
 dnf install git -y
 
