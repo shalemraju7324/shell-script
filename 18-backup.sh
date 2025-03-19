@@ -10,9 +10,6 @@ SOURCE_DIR=$1
 DEST_DIR=$2
 DAYS=${3:-14} #we are taking by default 14 days
 
-SOURCE_DIR="/home/ec2-user/app-logs"
-DEST_DIR="/home/ec2-user/archieves"
-
 LOGS_FOLDER="/home/ec2-user/shellscript-logs"
 LOG_FILE=$(echo $0 | cut -d "." -f1 )
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
