@@ -28,7 +28,7 @@ VALIDATE(){
 }
 USAGE(){
 
-    echo -e $R USAGE :: $N sh 18-backup.sh <SOURCE_DIR> <DEST_DIR> <DAYS(optinal)>
+    echo -e "$R USAGE :: $N sh 18-backup.sh <SOURCE_DIR> <DEST_DIR> <DAYS(optinal)>"
 }
 
 if [ $# -lt 2]
