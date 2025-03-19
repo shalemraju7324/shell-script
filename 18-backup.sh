@@ -42,7 +42,7 @@ fi
 if [ ! -d $SOURCE_DIR ]
 
 then
-    echo -e "$SOURCE_DIR Does not exist... pease check
+    echo -e "$SOURCE_DIR Does not exist... pease check"
     exit 1
  fi
 
