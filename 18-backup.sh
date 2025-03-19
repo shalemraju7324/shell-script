@@ -51,7 +51,6 @@ then
     find $SOURCE_DIR -name "*.log" -mtime +$DAYS | zip -@ "ZIP_FILE"
     if[ -f "$ZIP_FILE"]
     then
-    else
         echo -e "sucessfully created zip files older than $DAYS"
          while read -r filepath # here filepath is the variable name, you can give any name
         do
@@ -59,7 +58,10 @@ then
             rm -rf $filepath
             echo "Deleted file: $filepath"
         done <<< $FILES
+   else
+        echo -e "$R Error:: $N Failed to create ZIP file "
+        exit 1
+    fi
     else
-else
-    echo "No files older than $DAYS"
+    echo "No files found older than $DAYS"
 fi
