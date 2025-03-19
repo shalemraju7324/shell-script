@@ -11,6 +11,7 @@ DEST_DIR=$2
 DAYS=${3:-14} #we are taking by default 14 days
 
 SOURCE_DIR="/home/ec2-user/app-logs"
+DEST_DIR="/home/ec2-user/archieves"
 
 LOGS_FOLDER="/home/ec2-user/shellscript-logs"
 LOG_FILE=$(echo $0 | cut -d "." -f1 )
@@ -43,6 +44,13 @@ if [ ! -d $SOURCE_DIR ]
 
 then
     echo -e "$SOURCE_DIR Does not exist... pease check"
+    exit 1
+ fi
+
+ if [ ! -d $DEST_DIR ]
+
+then
+    echo -e "$DEST_DIR Does not exist... pease check"
     exit 1
  fi
 
