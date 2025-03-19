@@ -29,7 +29,7 @@ VALIDATE(){
 USAGE(){
 
     echo -e "$R USAGE :: $N sh 18-backup.sh <SOURCE_DIR> <DEST_DIR> <DAYS(optinal)>"
-    
+    exit 1
 }
 
 mkdir -p /home/ec2-user/shellscript-logs/
