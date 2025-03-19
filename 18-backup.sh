@@ -53,7 +53,7 @@ echo "Script started executing at: $TIMESTAMP" &>>$LOG_FILE_NAME
 
 FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
 
-if [ -n $FILES ]
+if [ -n "$FILES" ] # true if there are files to zip
 then 
     echo "files are :: $FILES"
 else
