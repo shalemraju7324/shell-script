@@ -39,4 +39,10 @@ then
     USAGE
 fi
 
+if [ ! -d $SOURCE_DIR ]
+
+then
+    echo -e "$SOURCE_DIR Does not exist... pease check
+ fi
+
 echo "Script started executing at: $TIMESTAMP" &>>$LOG_FILE_NAME
